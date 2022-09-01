@@ -95,3 +95,46 @@
 .reco p {
   margin-left: 5rem;
 }
+/* -----------CART------------------------- */
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  background: var(--negro);
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.close {
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
+}
+.cart__Container {
+  width: 22rem;
+  display: flex;
+  height: auto;
+}
+.cartBox {
+  display: flex;
+  background: var(--negro);
+  width: 22rem;
+}
+.cartBox__info {
+  display: flex;
+  flex-direction: column;
+}
+.moreLess {
+  display: flex;
+}
+.morLes {
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+}
+.imgCart {
+  width: 4rem;
+}
