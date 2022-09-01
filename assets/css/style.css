@@ -94,13 +94,14 @@ body {
 }
 /* -----------CART------------------------- */
 .cart {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: auto;
   height: auto;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 7rem;
+  background: var(--negro);
 }
 .close {
   width: 1rem;
@@ -122,7 +123,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 1rem;
   background: var(--negro);
   border-radius: 0.5rem;
 }
@@ -138,6 +138,7 @@ body {
 }
 .description {
   background: none;
+  font-size: 0.8rem;
 }
 .price {
   background: none;
@@ -156,4 +157,10 @@ body {
 .imgCart {
   width: 4rem;
   height: 3rem;
+}
+.display {
+  display: flex;
+}
+.display-off {
+  display: none;
 }
