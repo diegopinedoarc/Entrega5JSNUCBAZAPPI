@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--negrofondo);
 }
 :root {
   /* colores */
@@ -18,11 +17,13 @@
   /* fuentes */
   --montserratFONT: "Montserrat", sans-serif;
 }
+body {
+  background: var(--negrofondo);
+}
 .main {
   font-family: var(--montserratFONT);
   display: flex;
   flex-direction: column;
-  width: 100vw;
   color: var(--blanco);
 }
 /* -----------HEADER----------- */
@@ -30,7 +31,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding-left: 5rem;
   padding-right: 6rem;
   padding-top: 2rem;
@@ -55,13 +55,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   margin-top: 4rem;
   padding: 4rem;
 }
-.hero__imgs {
-  width: 50%;
-}
+
 .imghero {
   scale: 60%;
 }
@@ -99,42 +96,64 @@
 .cart {
   display: flex;
   flex-direction: column;
-  width: 22rem;
-  background: var(--negro);
+  width: auto;
   height: auto;
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
 }
 .close {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
   background: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  cursor: pointer;
 }
 .cart__Container {
-  width: 22rem;
+  width: 26rem;
   display: flex;
-  height: auto;
 }
 .cartBox {
+  width: 24rem;
+  height: 5rem;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
   background: var(--negro);
-  width: 22rem;
+  border-radius: 0.5rem;
 }
 .cartBox__info {
-  display: flex;
-  flex-direction: column;
+  background: var(--negro);
 }
 .moreLess {
   display: flex;
+  gap: 1rem;
+}
+.productName {
+  background: none;
+}
+.description {
+  background: none;
+}
+.price {
+  background: none;
+  color: linear-gradient(to right, var(--degrade1), var(--degrade2));
 }
 .morLes {
   background: linear-gradient(to right, var(--degrade1), var(--degrade2));
   width: 1rem;
   height: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .imgCart {
   width: 4rem;
+  height: 3rem;
 }
