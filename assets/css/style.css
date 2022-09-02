@@ -96,12 +96,15 @@ body {
 .cart {
   display: none;
   flex-direction: column;
+  border-radius: 0.5rem;
   width: auto;
   height: auto;
   position: absolute;
   right: 0;
   top: 7rem;
   background: var(--negro);
+  padding: 1rem;
+  gap: 0.5rem;
 }
 .close {
   width: 1rem;
@@ -116,6 +119,8 @@ body {
 .cart__Container {
   width: 26rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cartBox {
   width: 24rem;
@@ -125,6 +130,7 @@ body {
   justify-content: space-around;
   background: var(--negro);
   border-radius: 0.5rem;
+  border: solid 0.5px black;
 }
 .cartBox__info {
   background: var(--negro);
