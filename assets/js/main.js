@@ -1,6 +1,7 @@
 //Elementos HTML +---------
 const cartBTN = document.querySelector("#cartBTN");
 const cartSection = document.querySelector(".cart");
+const closeCart = document.querySelector("#close");
 //--------------------------
 //Seteo cart en localStorage
 // let cart = json.parse(localStorage.getItem("cart")) || [];
@@ -10,6 +11,10 @@ const cartSection = document.querySelector(".cart");
 // };
 
 cartBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  cartSection.classList.toggle("display");
+});
+closeCart.addEventListener("click", (e) => {
   e.preventDefault();
   cartSection.classList.toggle("display");
 });

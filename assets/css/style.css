@@ -101,7 +101,7 @@ body {
   height: auto;
   position: absolute;
   right: 0;
-  top: 7rem;
+  top: 0;
   background: var(--negro);
   padding: 1rem;
   gap: 0.5rem;
