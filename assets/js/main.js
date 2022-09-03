@@ -2,6 +2,8 @@
 const cartBTN = document.querySelector("#cartBTN");
 const cartSection = document.querySelector(".cart");
 const closeCart = document.querySelector("#close");
+const productHero = document.querySelector("#products");
+const productsContainer = document.querySelector(".products__container");
 //--------------------------
 //Seteo cart en localStorage
 // let cart = json.parse(localStorage.getItem("cart")) || [];
@@ -18,3 +20,5 @@ closeCart.addEventListener("click", (e) => {
   e.preventDefault();
   cartSection.classList.toggle("display");
 });
+
+document.addEventListener("DOMContentLoaded", popularProducts(stockProducts));
