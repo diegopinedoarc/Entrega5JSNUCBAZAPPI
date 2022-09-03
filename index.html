@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section class="main">
-      <section class="header">
-        <a href="./index.html"><img src="./assets/images/logo.png" alt="" /></a>
-        <ul class="nav">
-          <li class="nav__li">
-            <a href=""><img src="./assets/images/Home.png" alt="" /> Home</a>
-          </li>
-          <li id="cartBTN" class="nav__li">
-            <a href=""><img src="./assets/images/cart.png" alt="" /></a>
-          </li>
-          <li class="nav__li">
-            <a class="flexCol" href=""
-              ><img src="./assets/images/Fill 1.png" alt="" />
-              <img src="./assets/images/Fill 4.png" alt=""
-            /></a>
-          </li>
-        </ul>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>NucbaZappi</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="./index.html"><img src="./assets/images/logo.png" alt="" /></a>
+    <nav>
+      <ul class="nav">
+        <li class="nav__li">
+          <a href=""><img src="./assets/images/Home.png" alt="" /> Home</a>
+        </li>
+        <li id="cartBTN" class="nav__li">
+          <a href=""><img src="./assets/images/cart.png" alt="" /></a>
+        </li>
+        <li class="nav__li">
+          <a class="flexCol" href=""><img src="./assets/images/Fill 1.png" alt="" />
+            <img src="./assets/images/Fill 4.png" alt="" /></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="wrap">
+    <main class="main">
       <section class="hero">
         <div class="hero__info">
           <h2 class="hero__title">
-            Si tenes Zappi,<span class="small"> tenes Nucba.</span>
+            Si tenes Zappi,
           </h2>
+          <span class="small text-bold"> tenes Nucba.</span>
           <h3 class="hero__subTitle">
             Buscá lo que quieras y nucba te quedes sin comida.
           </h3>
-          <button class="hero__BTN">VER MÁS</button>
+          <button class="btn">VER MÁS</button>
         </div>
         <div class="hero__imgs">
           <img class="imghero" src="./assets/images/imghero.png" alt="pizza1" />
@@ -63,16 +66,109 @@
           </div>
         </div>
       </section>
-      <section class="reco">
-        <p>Hoy te recomendamos</p>
+      <section class="recommend">
+        <h2 class="hero__title hero__title--small">Hoy te recomendamos</h2>
+        <article class="recommend__card-container">
+          <div class="recommend__card">
+            <div class="recommend__img-container">
+              <img class="recommend__img" src="/assets/images/menu8.png" alt="">
+            </div>
+            <div class="recommend__text-container">
+              <span class="recommend__card-title">Bennaziana</span>
+              <span class="recommend__card-desc">La más completa</span>
+              <span class="recommend__card-price">$3600</span>
+            </div>
+            <button class="btn btn--small">Agregar</button>
+          </div>
+        </article>
       </section>
-      <section class="categories"></section>
-      <section class="popular"></section>
-      <footer class="footer"></footer>
-    </section>
+      <section class="categories">
+        <h2 class="categories__title text-bold">Categorias</h2>
+        <div class="categories__container">
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/pizza1.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/pizza1.png" alt="">
+            </div>
+            <p>Pizzas</p>
+            <div class="categories__rectangle"></div>
+          </button>
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/burger.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/burger.png" alt="">
+            </div>
+            <p>Hamburguesas</p>
+            <div class="categories__rectangle"></div>
+          </button>
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/fries.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/fries.png" alt="">
+            </div>
+            <p>Napapuki</p>
+            <div class="categories__rectangle"></div>
+          </button>
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/pizza2.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/pizza2.png" alt="">
+            </div>
+            <p>Individuales</p>
+            <div class="categories__rectangle"></div>
+          </button>
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/buritto.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/buritto.png" alt="">
+            </div>
+            <p>Wraps</p>
+            <div class="categories__rectangle"></div>
+          </button>
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/taco.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/taco.png" alt="">
+            </div>
+            <p>Mexican Food</p>
+            <div class="categories__rectangle"></div>
+          </button>
+          <button class="categories__caja">
+            <div class="categories__img-position">
+              <img class="categories__img-normal" src="/assets/images/categories/float.png" alt="">
+              <img class="categories__img-normal blur" src="/assets/images/categories/float.png" alt="">
+            </div>
+            <p>Batidukis</p>
+            <div class="categories__rectangle"></div>
+          </button>
+        </div>
+      </section>
+      <section class="products">
+        <h2 class="hero__title hero__title--small">Los más populares</h2>
+        <article class="products__container">
+          <div class="products-card">
+            <div class="wrap__card">
+              <div class="products-card__img-container">
+                <img class="products-card__img" src="assets/images/products/menu5.png" alt="">
+              </div>
+              <div class="products-card__text-container">
+                <span class="recommend__card-title">Bennaziana</span>
+                <span class="recommend__card-desc">La más completa</span>
+                <span class="recommend__card-price">$3600</span>
+              </div>
+              <button class="btn btn--small btn--product">Agregar</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <footer class="footer"></footer>
+  </section>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/stock.js"></script>
     <script src="./assets/js/components.js"></script>
     <script src="./assets/js/stock.js"></script>
-  </body>
+</body>
+
 </html>
