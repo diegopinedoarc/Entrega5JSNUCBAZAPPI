@@ -19,6 +19,12 @@
   --montserratFONT: "Montserrat", sans-serif;
 }
 
+.main {
+  font-family: var(--montserratFONT);
+  display: flex;
+  flex-direction: column;
+=======
+
 
 
 html,
@@ -43,7 +49,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding-left: 5rem;
   padding-right: 6rem;
   padding-top: 2rem;
@@ -74,18 +79,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   margin-top: 4rem;
   margin-bottom: 10rem;
 }
 
 .hero__imgs {
   width: 50%;
+    scale: 60%;
 }
 
-.imghero {
-  scale: 60%;
-}
+
 
 .hero__info {
   display: flex;
@@ -205,6 +208,84 @@ body {
   width: 9rem;
 }
 
+/* -----------CART------------------------- */
+.cart {
+  display: none;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--negro);
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.close {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  cursor: pointer;
+}
+.cart__Container {
+  width: 26rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartBox {
+  width: 24rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--negro);
+  border-radius: 0.5rem;
+  border: solid 0.5px black;
+}
+.cartBox__info {
+  background: var(--negro);
+}
+.moreLess {
+  display: flex;
+  gap: 1rem;
+}
+.productName {
+  background: none;
+}
+.description {
+  background: none;
+  font-size: 0.8rem;
+}
+.price {
+  background: none;
+  color: linear-gradient(to right, var(--degrade1), var(--degrade2));
+}
+.morLes {
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.imgCart {
+  width: 4rem;
+  height: 3rem;
+}
+.display {
+  display: flex;
+}
+.display-off {
+  display: none;
+}
 /* ----------categorias----------------- */
 
 .categories {
@@ -317,3 +398,4 @@ body {
   right: 0;
   bottom: 0;
 }
+

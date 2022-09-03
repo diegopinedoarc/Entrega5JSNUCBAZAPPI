@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,7 +16,7 @@
         <li class="nav__li">
           <a href=""><img src="./assets/images/Home.png" alt="" /> Home</a>
         </li>
-        <li class="nav__li">
+        <li id="cartBTN" class="nav__li">
           <a href=""><img src="./assets/images/cart.png" alt="" /></a>
         </li>
         <li class="nav__li">
@@ -44,7 +43,29 @@
           <img class="imghero" src="./assets/images/imghero.png" alt="pizza1" />
         </div>
       </section>
-      <section class="cart"></section>
+      <section class="cart">
+        <p class="close" id="close">X</p>
+        <h3>Tus productos</h3>
+        <div class="cart__Container">
+          <div class="cartBox">
+            <img
+              class="imgCart"
+              src="./assets/images/Photo Menu (3).png"
+              alt=""
+            />
+            <div class="cartBox__info">
+              <p class="productName">Benneziana</p>
+              <p class="description">La más completa</p>
+              <span class="price">$3650</span>
+            </div>
+            <div class="moreLess">
+              <span class="morLes">-</span>
+              <p>1</p>
+              <span class="morLes">+</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="recommend">
         <h2 class="hero__title hero__title--small">Hoy te recomendamos</h2>
         <article class="recommend__card-container">
@@ -144,6 +165,10 @@
   </div>
   <footer class="footer"></footer>
   </section>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/stock.js"></script>
+    <script src="./assets/js/components.js"></script>
+    <script src="./assets/js/stock.js"></script>
 </body>
 
 </html>
