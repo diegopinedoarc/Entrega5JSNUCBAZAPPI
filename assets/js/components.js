@@ -14,6 +14,7 @@ const recommendCard = () => {
 
 const productCard = (product) => {
   const { img, name, text, price } = product;
+  console.log(text);
   return `<div class="products-card">
     <div class="wrap__card">
       <div class="products-card__img-container">
@@ -22,9 +23,11 @@ const productCard = (product) => {
       <div class="products-card__text-container">
         <span class="recommend__card-title">${name}</span>
         <span class="recommend__card-desc">${text}</span>
-        <span class="recommend__card-price">$${price}</span>
       </div>
-      <button class="btn btn--small btn--product">Agregar</button>
+      <div class="products-card__container">
+        <span class="recommend__card-price">$${price}</span>
+        <button class="btn btn--small btn--product product">Agregar</button>   
+         </div>
     </div>
   </div>`;
 };

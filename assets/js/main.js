@@ -21,4 +21,13 @@ closeCart.addEventListener("click", (e) => {
   cartSection.classList.toggle("display");
 });
 
-document.addEventListener("DOMContentLoaded", popularProducts(stockProducts));
+document.addEventListener("DOMContentLoaded", () => {
+  popularProducts(stockProducts);
+  const btnAdd = document.querySelectorAll(".product");
+  console.log(btnAdd);
+  btnAdd.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("btn");
+    });
+  });
+});
