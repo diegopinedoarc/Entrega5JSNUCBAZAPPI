@@ -1,49 +1,76 @@
-// test =>
 const renderingHtml = (stock) => {
   return (productsContainer.innerHTML = stock
     .map((product) => productCard(product))
     .join(""));
 };
 
-// const normalicePrice = (price) => {
-//   return Number.parseFloat(price).toFixed(2);
-// };
-
 const popularProducts = (stockProducts) => {
   const popularList = stockProducts.filter(
     (product) => product.popular === true
   );
-  console.log(popularList);
   renderingHtml(popularList);
 };
 
-
 const addProduct = ({ target }) => {
   if (!target.classList.contains("product")) return;
-  console.log(target.dataset.name);
 };
 
-//-----edgardo------//
-const filterCategory = e => {
+const filterCategory = (e) => {
   const selectedCategory = e.target.dataset.category;
   const categories = [...categoriesList];
-  categories.forEach(category=>{
-    if(category.dataset.category !== selectedCategory){
-      category.classList.remove("active")
-    }else{
-      category.classList.add("active")
+  categories.forEach((category) => {
+    if (category.dataset.category !== selectedCategory) {
+      category.classList.remove("active");
+    } else {
+      category.classList.add("active");
     }
-  })
+  });
 };
 
-const filterProducts = e =>{
-  if(!e.target.classList.contains("categories__caja"))
-  return;
-  filterCategory (e);
-  if(e.target.dataset.category.toLowerCase()) {
-    products.innerHTML = "";
-    renderingHtml (e.target.dataset.category)
+const filterProducts = (e) => {
+  if (!e.target.classList.contains("categories__caja")) return;
+  const target = e.target;
+  if (target.classList.contains("active")) {
+    target.classList.remove("active");
+    titleCategory.innerHTML = "Lo más populares";
+    return popularProducts(stockProducts);
+  } else {
+    filterCategory(e);
   }
-}
-//-----edgardo------//
+  const filterProductCategory = stockProducts.filter(
+    (product) => product.category === target.dataset.category.toLowerCase()
+  );
+  titleCategory.innerHTML = capitaliceStr(target.innerText);
+  renderingHtml(filterProductCategory);
+};
 
+const recommendRandom = () => {
+  let randomArray = [];
+  for (let i = 0; i < stockProducts.length; i++) {
+    const element =
+      stockProducts[parseInt(Math.random() * stockProducts.length)];
+    if (!randomArray.some((e) => e.id === element.id)) {
+      randomArray.push(element);
+    }
+    if (randomArray.length === 3) {
+      break;
+    }
+  }
+  recommendContainer.innerHTML = randomArray
+    .map((product) => recommendCard(product))
+    .join("");
+};
+const firstLetterMayus = (strs) => {
+  const str = strs.trim();
+  const firstLetterUpper = str.charAt(0).toUpperCase();
+  const sliceStr = str.slice(1);
+  const strFirstLetterMayus = firstLetterUpper + sliceStr;
+  return strFirstLetterMayus;
+};
+const capitaliceStr = (strs) => {
+  const strsNormalice = strs.toLowerCase();
+  const strArr = strsNormalice.split(" ");
+  let capitaliceString = "";
+  strArr.forEach((str) => (capitaliceString += `${firstLetterMayus(str)} `));
+  return capitaliceString.trim();
+};
