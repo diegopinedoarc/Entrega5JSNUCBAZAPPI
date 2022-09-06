@@ -13,7 +13,7 @@ const recommendCard = () => {
 };
 
 const productCard = (product) => {
-  const { img, name, text, price } = product;
+  const { img, id, name, text, price } = product;
   console.log(text);
   return `<div class="products-card">
     <div class="wrap__card">
@@ -21,12 +21,18 @@ const productCard = (product) => {
         <img class="products-card__img" src=${img} alt="">
       </div>
       <div class="products-card__text-container">
-        <span class="recommend__card-title">${name}</span>
+        <span class="recommend__card-title" data-name="${name}">${name}</span>
         <span class="recommend__card-desc">${text}</span>
       </div>
       <div class="products-card__container">
         <span class="recommend__card-price">$${price}</span>
-        <button class="btn btn--small btn--product product">Agregar</button>   
+        <button class="btn btn--small btn--product product"
+        data-img='${img}'
+        data-id='${id}'
+        data-name='${name}'
+        data-bid='${text}'
+        data-price='${price}'
+        >Agregar</button>   
          </div>
     </div>
   </div>`;

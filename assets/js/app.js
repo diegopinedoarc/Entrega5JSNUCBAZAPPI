@@ -18,6 +18,10 @@ const popularProducts = (stockProducts) => {
 };
 
 
+const addProduct = ({ target }) => {
+  if (!target.classList.contains("product")) return;
+  console.log(target.dataset.name);
+};
 
 //-----edgardo------//
 const filterCategory = e => {
@@ -42,3 +46,4 @@ const filterProducts = e =>{
   }
 }
 //-----edgardo------//
+
