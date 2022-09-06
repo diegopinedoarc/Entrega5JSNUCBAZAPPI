@@ -17,4 +17,9 @@ const popularProducts = (stockProducts) => {
   renderingHtml(popularList);
 };
 
+const addProduct = ({ target }) => {
+  if (!target.classList.contains("product")) return;
+  console.log(target.dataset.name);
+};
+
 const filterCategory = ({ target }) => {};
