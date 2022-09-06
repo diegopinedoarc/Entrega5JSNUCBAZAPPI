@@ -97,13 +97,172 @@ createAndPush(
   3200,
   true
 );
-// individual;
+// hamburguesas;
 createAndPush(
-  "assets/images/products/individualPepperoni.png",
+  "assets/images/products/burger1.jpg",
   idRandom(),
-  "Pepperoni",
-  "individual",
-  "Disfruta!",
-  3200,
+  "Cheesse Burger",
+  "hamburguesas",
+  "Extra queso",
+  1200,
   true
 );
+createAndPush(
+  "assets/images/products/burger2.jpg",
+  idRandom(),
+  "MigBac",
+  "hamburguesas",
+  "Se parece a la del payaso",
+  1200,
+  true
+);
+createAndPush(
+  "assets/images/products/burger3.jpg",
+  idRandom(),
+  "Vergan Burger",
+  "hamburguesas",
+  "la mas tranqui",
+  3150,
+  false
+);
+// Napapuki;
+createAndPush(
+  "assets/images/products/papas1.jpg",
+  idRandom(),
+  "Papas con Cheddar",
+  "napapuki",
+  "Las nuevas clasicas",
+  1000,
+  true
+);
+createAndPush(
+  "assets/images/products/papas2.jpg",
+  idRandom(),
+  "Papas Rusticas",
+  "napapuki",
+  "Mas caras y sin pelar",
+  2500,
+  true
+);
+createAndPush(
+  "assets/images/products/papas3.jpg",
+  idRandom(),
+  "Papas Hasselback",
+  "napapuki",
+  "Si salen bien es un milagro",
+  3000,
+  false
+);
+// individuales;
+createAndPush(
+  "assets/images/products/porcion1.jpg",
+  idRandom(),
+  "Tarta de verduras",
+  "individuales",
+  "Que acelga",
+  1200,
+  false
+);
+createAndPush(
+  "assets/images/products/porcion2",
+  idRandom(),
+  "Tortilla de papa",
+  "individuales",
+  "Sin cebolla",
+  1500,
+  true
+);
+createAndPush(
+  "assets/images/products/porcion3.jpg",
+  idRandom(),
+  "Tarta de jamon y queso",
+  "individuales",
+  "Muy buena",
+  1800,
+  true
+);
+// wraps;
+createAndPush(
+  "assets/images/products/wrap1.jpg",
+  idRandom(),
+  "Wrap de carne",
+  "wraps",
+  "Extra carne",
+  1800,
+  true
+);
+createAndPush(
+  "assets/images/products/wrap2.jpg",
+  idRandom(),
+  "Wrap de pollo",
+  "wraps",
+  "Barato",
+  500,
+  true
+);
+createAndPush(
+  "assets/images/products/wrap3.jpg",
+  idRandom(),
+  "Wrap de vegano",
+  "wraps",
+  "Light",
+  2200,
+  false
+);
+// mexican food;
+createAndPush(
+  "assets/images/products/mexican1.jpg",
+  idRandom(),
+  "Torta de Jamon",
+  "mexican",
+  "La que le gusta al chavo",
+  2200,
+  true
+);
+createAndPush(
+  "assets/images/products/mexican2.jpg",
+  idRandom(),
+  "Burritos",
+  "mexican",
+  "El que disfruta el señor barriga",
+  1800,
+  true
+);
+createAndPush(
+  "assets/images/products/mexican3.jpg",
+  idRandom(),
+  "Tacos",
+  "mexican",
+  "El que le gusta a Don Ramon",
+  2900,
+  true
+);
+// batidukis;
+createAndPush(
+  "assets/images/products/batidos1.jpg",
+  idRandom(),
+  "Licuados al agua",
+  "batidos",
+  "muy rico",
+  900,
+  true
+);
+createAndPush(
+  "assets/images/products/batidos2.jpg",
+  idRandom(),
+  "Smoothie",
+  "batidos",
+  "Disfruta!",
+  1100,
+  true
+);
+createAndPush(
+  "assets/images/products/ibatidos3.jpg",
+  idRandom(),
+  "Milkshakes",
+  "batidos",
+  "El mejor",
+  2000,
+  false
+);
+

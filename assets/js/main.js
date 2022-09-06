@@ -4,6 +4,8 @@ const cartSection = document.querySelector(".cart");
 const closeCart = document.querySelector("#close");
 const productHero = document.querySelector("#products");
 const productsContainer = document.querySelector(".products__container");
+
+
 //--------------------------
 //Seteo cart en localStorage
 // let cart = json.parse(localStorage.getItem("cart")) || [];
@@ -31,3 +33,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
