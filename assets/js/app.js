@@ -17,9 +17,33 @@ const popularProducts = (stockProducts) => {
   renderingHtml(popularList);
 };
 
+
 const addProduct = ({ target }) => {
   if (!target.classList.contains("product")) return;
   console.log(target.dataset.name);
 };
 
-const filterCategory = ({ target }) => {};
+//-----edgardo------//
+const filterCategory = e => {
+  const selectedCategory = e.target.dataset.category;
+  const categories = [...categoriesList];
+  categories.forEach(category=>{
+    if(category.dataset.category !== selectedCategory){
+      category.classList.remove("active")
+    }else{
+      category.classList.add("active")
+    }
+  })
+};
+
+const filterProducts = e =>{
+  if(!e.target.classList.contains("categories__caja"))
+  return;
+  filterCategory (e);
+  if(e.target.dataset.category.toLowerCase()) {
+    products.innerHTML = "";
+    renderingHtml (e.target.dataset.category)
+  }
+}
+//-----edgardo------//
+
