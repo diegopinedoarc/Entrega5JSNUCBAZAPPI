@@ -9,7 +9,8 @@ const categoriesList = document.querySelectorAll(".categories__caja");
 const titleCategory = document.querySelector(".titleCategory");
 const recommendContainer = document.querySelector("#containerRecommend");
 
-//--------------------------
+
+
 //Seteo cart en localStorage
 // let cart = json.parse(localStorage.getItem("cart")) || [];
 //Envio al localStorage de la lista del cart
@@ -32,4 +33,6 @@ recommendContainer.addEventListener("click", addProduct);
 categoriesList.forEach((btn) => {
   btn.addEventListener("click", filterProducts);
 });
+
 productsContainer.addEventListener("click", addProduct);
+
