@@ -16,6 +16,8 @@ let createAndPush = (img, id, name, category, text, price, popular) => {
     new Product(img, id, name, category, text, price, popular)
   );
 };
+
+// categorias: pizza,burger,fries, individual, wraps(burritos),mexican, float(batidos)
 const idRandom = () => {
   let randomId = parseInt(Math.random() * 1000);
   if (stockProducts.some((product) => product.id === randomId)) {
@@ -37,7 +39,7 @@ createAndPush(
   "assets/images/products/pizzaPeperoni.jpg",
   idRandom(),
   "Pizza de pepperoni",
-  "pizza",
+  "float",
   "La más completa",
   3200,
   true
@@ -46,7 +48,7 @@ createAndPush(
   "assets/images/products/pizzaFugazza.jpg",
   idRandom(),
   "Pizza fugazza",
-  "pizza",
+  "mexican",
   "La más completa",
   3200,
   true
@@ -55,7 +57,7 @@ createAndPush(
   "assets/images/products/pizzaDeChampiñones.png",
   idRandom(),
   "Pizza de champiñones",
-  "pizza",
+  "mexican",
   "La más completa",
   3200,
   true
@@ -64,7 +66,7 @@ createAndPush(
   "assets/images/products/pizzaNapolitana.jpg",
   idRandom(),
   "Pizza napolitana",
-  "pizza",
+  "fries",
   "La más completa",
   3200,
   false
@@ -74,7 +76,7 @@ createAndPush(
   "assets/images/products/pizzaHawaiana.jpg",
   idRandom(),
   "Pizza hawaiana",
-  "pizza",
+  "burger",
   "La más completa",
   3200,
   true
@@ -83,7 +85,7 @@ createAndPush(
   "assets/images/products/pizzaMargarita.jpg",
   idRandom(),
   "Pizza margarita",
-  "pizza",
+  "wraps",
   "La más completa",
   3200,
   false

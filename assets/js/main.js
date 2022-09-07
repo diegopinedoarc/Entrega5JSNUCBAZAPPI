@@ -4,9 +4,13 @@ const cartSection = document.querySelector(".cart");
 const closeCart = document.querySelector("#close");
 const productHero = document.querySelector("#products");
 const productsContainer = document.querySelector(".products__container");
+const categories = document.querySelector(".categories");
+const categoriesList = document.querySelectorAll(".categories__caja");
+const titleCategory = document.querySelector(".titleCategory");
+const recommendContainer = document.querySelector("#containerRecommend");
 
 
-//--------------------------
+
 //Seteo cart en localStorage
 // let cart = json.parse(localStorage.getItem("cart")) || [];
 //Envio al localStorage de la lista del cart
@@ -23,15 +27,12 @@ closeCart.addEventListener("click", (e) => {
   cartSection.classList.toggle("display");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  popularProducts(stockProducts);
-  const btnAdd = document.querySelectorAll(".product");
-  console.log(btnAdd);
-  btnAdd.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      console.log("btn");
-    });
-  });
+document.addEventListener("DOMContentLoaded", popularProducts(stockProducts));
+recommendContainer.addEventListener("DOMContentLoaded", recommendRandom());
+recommendContainer.addEventListener("click", addProduct);
+categoriesList.forEach((btn) => {
+  btn.addEventListener("click", filterProducts);
 });
 
+productsContainer.addEventListener("click", addProduct);
 
