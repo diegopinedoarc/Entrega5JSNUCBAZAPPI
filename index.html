@@ -9,6 +9,7 @@
   <title>NucbaZappi</title>
 </head>
 
+
 <body>
   <header class="header">
     <a href="./index.html"><img src="./assets/images/logo.png" alt="" /></a>
@@ -65,7 +66,7 @@
       </section>
       <section class="recommend">
         <h2 class="hero__title hero__title--small">Hoy te recomendamos</h2>
-        <article class="recommend__card-container">
+        <article class="recommend__card-container" id="containerRecommend">
           <div class="recommend__card">
             <div class="recommend__img-container">
               <img class="recommend__img" src="/assets/images/menu8.png" alt="">
@@ -82,7 +83,7 @@
       <section class="categories">
         <h2 class="categories__title text-bold">Categorias</h2>
         <div class="categories__container">
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="pizza">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/pizza1.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/pizza1.png" alt="">
@@ -90,7 +91,7 @@
             <p>Pizzas</p>
             <div class="categories__rectangle"></div>
           </button>
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="burger">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/burger.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/burger.png" alt="">
@@ -98,7 +99,7 @@
             <p>Hamburguesas</p>
             <div class="categories__rectangle"></div>
           </button>
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="fries">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/fries.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/fries.png" alt="">
@@ -106,7 +107,7 @@
             <p>Napapuki</p>
             <div class="categories__rectangle"></div>
           </button>
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="individual">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/pizza2.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/pizza2.png" alt="">
@@ -114,7 +115,7 @@
             <p>Individuales</p>
             <div class="categories__rectangle"></div>
           </button>
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="wraps">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/buritto.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/buritto.png" alt="">
@@ -122,7 +123,7 @@
             <p>Wraps</p>
             <div class="categories__rectangle"></div>
           </button>
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="mexican">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/taco.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/taco.png" alt="">
@@ -130,7 +131,7 @@
             <p>Mexican Food</p>
             <div class="categories__rectangle"></div>
           </button>
-          <button class="categories__caja">
+          <button class="categories__caja" data-category="float">
             <div class="categories__img-position">
               <img class="categories__img-normal" src="/assets/images/categories/float.png" alt="">
               <img class="categories__img-normal blur" src="/assets/images/categories/float.png" alt="">
@@ -140,32 +141,21 @@
           </button>
         </div>
       </section>
-      <section class="products">
-        <h2 class="hero__title hero__title--small">Los más populares</h2>
+      <section class="products" id="products">
+        <h2 class="hero__title hero__title--small titleCategory">Los más populares</h2>
         <article class="products__container">
-          <div class="products-card">
-            <div class="wrap__card">
-              <div class="products-card__img-container">
-                <img class="products-card__img" src="assets/images/products/menu5.png" alt="">
-              </div>
-              <div class="products-card__text-container">
-                <span class="recommend__card-title">Bennaziana</span>
-                <span class="recommend__card-desc">La más completa</span>
-                <span class="recommend__card-price">$3600</span>
-              </div>
-              <button class="btn btn--small btn--product">Agregar</button>
-            </div>
-          </div>
+
         </article>
       </section>
     </main>
   </div>
   <footer class="footer"></footer>
   </section>
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/stock.js"></script>
   <script src="./assets/js/components.js"></script>
   <script src="./assets/js/stock.js"></script>
+  <script defer src="/assets/js/app.js"></script>
+  <script defer src="./assets/js/main.js"></script>
+  <script defer src="./assets/js/filtro-categorias.js"></script>
 </body>
 
 </html>
