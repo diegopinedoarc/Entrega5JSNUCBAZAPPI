@@ -7,7 +7,7 @@ const recommendCard = (product) => {
     <div class="recommend__text-container">
       <span class="recommend__card-title">${name}</span>
       <span class="recommend__card-desc">${text}</span>
-      <span class="recommend__card-price">${price}</span>
+      <span class="recommend__card-price">$${price}</span>
     </div>
     <button class="btn btn--small product"
     data-img='${img}'

@@ -39,25 +39,25 @@ createAndPush(
   "assets/images/products/pizzaPeperoni.jpg",
   idRandom(),
   "Pizza de pepperoni",
-  "float",
+  "pizza",
   "La más completa",
   3200,
-  true
+  false
 );
 createAndPush(
   "assets/images/products/pizzaFugazza.jpg",
   idRandom(),
   "Pizza fugazza",
-  "mexican",
+  "pizza",
   "La más completa",
   3200,
-  true
+  false
 );
 createAndPush(
   "assets/images/products/pizzaDeChampiñones.png",
   idRandom(),
   "Pizza de champiñones",
-  "mexican",
+  "pizza",
   "La más completa",
   3200,
   true
@@ -66,7 +66,7 @@ createAndPush(
   "assets/images/products/pizzaNapolitana.jpg",
   idRandom(),
   "Pizza napolitana",
-  "fries",
+  "pizza",
   "La más completa",
   3200,
   false
@@ -76,16 +76,16 @@ createAndPush(
   "assets/images/products/pizzaHawaiana.jpg",
   idRandom(),
   "Pizza hawaiana",
-  "burger",
+  "pizza",
   "La más completa",
   3200,
-  true
+  false
 );
 createAndPush(
   "assets/images/products/pizzaMargarita.jpg",
   idRandom(),
   "Pizza margarita",
-  "wraps",
+  "pizza",
   "La más completa",
   3200,
   false
@@ -104,7 +104,7 @@ createAndPush(
   "assets/images/products/burger1.jpg",
   idRandom(),
   "Cheesse Burger",
-  "hamburguesas",
+  "burger",
   "Extra queso",
   1200,
   true
@@ -113,16 +113,16 @@ createAndPush(
   "assets/images/products/burger2.jpg",
   idRandom(),
   "MigBac",
-  "hamburguesas",
+  "burger",
   "Se parece a la del payaso",
   1200,
-  true
+  false
 );
 createAndPush(
   "assets/images/products/burger3.jpg",
   idRandom(),
   "Vergan Burger",
-  "hamburguesas",
+  "burger",
   "la mas tranqui",
   3150,
   false
@@ -132,7 +132,7 @@ createAndPush(
   "assets/images/products/papas1.jpg",
   idRandom(),
   "Papas con Cheddar",
-  "napapuki",
+  "fries",
   "Las nuevas clasicas",
   1000,
   true
@@ -141,16 +141,16 @@ createAndPush(
   "assets/images/products/papas2.jpg",
   idRandom(),
   "Papas Rusticas",
-  "napapuki",
+  "fries",
   "Mas caras y sin pelar",
   2500,
-  true
+  false
 );
 createAndPush(
   "assets/images/products/papas3.jpg",
   idRandom(),
   "Papas Hasselback",
-  "napapuki",
+  "fries",
   "Si salen bien es un milagro",
   3000,
   false
@@ -160,16 +160,16 @@ createAndPush(
   "assets/images/products/porcion1.jpg",
   idRandom(),
   "Tarta de verduras",
-  "individuales",
+  "individual",
   "Que acelga",
   1200,
   false
 );
 createAndPush(
-  "assets/images/products/porcion2",
+  "assets/images/products/porcion2.jpg",
   idRandom(),
   "Tortilla de papa",
-  "individuales",
+  "individual",
   "Sin cebolla",
   1500,
   true
@@ -178,7 +178,7 @@ createAndPush(
   "assets/images/products/porcion3.jpg",
   idRandom(),
   "Tarta de jamon y queso",
-  "individuales",
+  "individual",
   "Muy buena",
   1800,
   true
@@ -244,7 +244,7 @@ createAndPush(
   "assets/images/products/batidos1.jpg",
   idRandom(),
   "Licuados al agua",
-  "batidos",
+  "float",
   "muy rico",
   900,
   true
@@ -253,18 +253,17 @@ createAndPush(
   "assets/images/products/batidos2.jpg",
   idRandom(),
   "Smoothie",
-  "batidos",
+  "float",
   "Disfruta!",
   1100,
   true
 );
 createAndPush(
-  "assets/images/products/ibatidos3.jpg",
+  "assets/images/products/batidos3.jpg",
   idRandom(),
   "Milkshakes",
-  "batidos",
+  "float",
   "El mejor",
   2000,
   false
 );
-
