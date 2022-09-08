@@ -14,7 +14,15 @@ const popularProducts = (stockProducts) => {
 const addProduct = ({ target }) => {
   if (!target.classList.contains("product")) return;
 };
-
+const addToCart = (e) => {
+  if (!e.target.classList.contains("product")) return;
+  const products = [...stockProducts];
+  products.forEach((product) => {
+    if (product.id == Number(e.target.dataset.id)) {
+      cartContainer.innerHTML += renderCardCart(product);
+    }
+  });
+};
 const filterCategory = (e) => {
   const selectedCategory = e.target.dataset.category;
   const categories = [...categoriesList];

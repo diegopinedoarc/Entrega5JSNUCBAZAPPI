@@ -42,3 +42,20 @@ const productCard = (product) => {
     </div>
   </div>`;
 };
+
+const renderCardCart = (product) => {
+  const { img, id, name, text, price } = product;
+  return `<div class = "cartBox">
+<img class="imgCart" src ="${img}">
+<div class="cartBox_info">
+  <p class="productName"> ${name} </p>
+  <p class="description"> ${text} </p>
+  <span class="price"> $${price} </span>
+</div>
+<div class="moreLess">
+  <span class= "morLes">-</span>
+  <span class="cant">1</span>
+  <span class="morLes">+</span>
+</div>
+</div>`;
+};
