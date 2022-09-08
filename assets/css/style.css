@@ -218,7 +218,7 @@ body {
   height: auto;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 10rem;
   background: var(--negro);
   padding: 1rem;
   gap: 0.5rem;
@@ -240,10 +240,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: .2rem;
 }
 
 .cartBox {
-  width: 24rem;
+  width: 28rem;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -260,26 +262,33 @@ body {
 .moreLess {
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .productName {
   background: none;
+  font-size: 1.2rem;
 }
 
 .description {
   background: none;
-  font-size: 0.8rem;
+  font-size: .9rem;
 }
 
 .price {
   background: none;
   color: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .morLes {
   background: linear-gradient(to right, var(--degrade1), var(--degrade2));
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  font-size: 2rem;
+  height: 2rem;
   border-radius: 0.2rem;
   display: flex;
   justify-content: center;
@@ -288,8 +297,15 @@ body {
 }
 
 .imgCart {
-  width: 4rem;
-  height: 3rem;
+  width: 5rem;
+  height: 4rem;
+  image-rendering: pixelated;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.cant {
+  font-size: 1rem;
 }
 
 .display {
