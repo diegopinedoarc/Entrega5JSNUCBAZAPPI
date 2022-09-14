@@ -44,18 +44,25 @@ const productCard = (product) => {
 };
 
 const renderCardCart = (product) => {
-  const { img, id, name, text, price } = product;
+  const { img, id, name, text, price, cant } = product;
   return `<div class = "cartBox">
 <img class="imgCart" src ="${img}">
 <div class="cartBox_info">
   <p class="productName"> ${name} </p>
-  <p class="description"> ${text} </p>
-  <span class="price"> $${price} </span>
+  <span class="price"> $${price}</span>
 </div>
 <div class="moreLess">
-  <span class= "morLes">-</span>
-  <span class="cant">1</span>
-  <span class="morLes">+</span>
+  <span class= "less" data-id=${id}>-</span>
+  <span class="cant">${cant}</span>
+  <span class="more" data-id=${id}>+</span>
 </div>
 </div>`;
+};
+const renderCart = (cartList) => {
+  if (!cartList.length) {
+    cartContainer.innerHTML = `<p class="empty-msg">No hay productos en el carrito</p>`;
+    return;
+  }
+  cartContainer.innerHTML = cart.map(renderCardCart).join("");
+  showTotal(cart);
 };
