@@ -11,18 +11,93 @@ const popularProducts = (stockProducts) => {
   renderingHtml(popularList);
 };
 
-const addProduct = ({ target }) => {
-  if (!target.classList.contains("product")) return;
+const showTotal = (cartList) => {
+  return (total.innerHTML = `$${cartList
+    .reduce((acc, cur) => Number(acc) + Number(cur.price) * Number(cur.cant), 0)
+    .toFixed(2)}`);
 };
+
 const addToCart = (e) => {
   if (!e.target.classList.contains("product")) return;
   const products = [...stockProducts];
   products.forEach((product) => {
     if (product.id == Number(e.target.dataset.id)) {
-      cartContainer.innerHTML += renderCardCart(product);
+      const AddedProduct = {
+        id: e.target.dataset.id,
+        name: e.target.dataset.name,
+        descrip: e.target.dataset.bid,
+        img: e.target.dataset.img,
+        price: e.target.dataset.price,
+      };
+      const existingCartItem = cart.find((item) => item.id === AddedProduct.id);
+      if (existingCartItem) {
+        cart = cart.map((item) => {
+          return item.id === AddedProduct.id
+            ? { ...item, cant: Number(item.cant) + 1 }
+            : item;
+        });
+      } else {
+        cart = [...cart, { ...AddedProduct, cant: 1 }];
+      }
+      saveLocalStorage(cart);
+      renderCart(cart);
+      showTotal(cart);
     }
   });
 };
+const handleQuantity = (e) => {
+  if (e.target.classList.contains("less")) {
+    const existingCartItem = cart.find(
+      (item) => item.id === e.target.dataset.id
+    );
+    if (existingCartItem.cant === 1) {
+      if (window.confirm("¿Desea Eliminar el producto del carrito?")) {
+        cart = cart.filter((prod) => prod.id !== existingCartItem.id);
+        saveLocalStorage(cart);
+        renderCart(cart);
+        showTotal(cart);
+        disableBuyBtn();
+        return;
+      }
+    }
+    cart = cart.map((item) => {
+      return item.id === existingCartItem.id
+        ? item.cant > 1
+          ? { ...item, cant: Number(item.cant) - 1 }
+          : { ...item, cant: 1 }
+        : item;
+    });
+  } else if (e.target.classList.contains("more")) {
+    const existingCartItem = cart.find(
+      (item) => item.id === e.target.dataset.id
+    );
+    cart = cart.map((item) => {
+      return item.id === existingCartItem.id
+        ? { ...item, cant: Number(item.cant) + 1 }
+        : item;
+    });
+  }
+  saveLocalStorage(cart);
+  renderCart(cart);
+  showTotal(cart);
+  disableBuyBtn();
+};
+const disableBuyBtn = () => {
+  if (!cart.length) {
+    buyBTN.classList.add("disabled");
+  } else {
+    buyBTN.classList.remove("disabled");
+  }
+};
+
+const completeBuy = () => {
+  if (!cart.length) return;
+  if (window.confirm("¿Desea finalizar su compra?")) {
+    localStorage.removeItem("cart");
+    window.location.reload();
+  }
+};
+
 const filterCategory = (e) => {
   const selectedCategory = e.target.dataset.category;
   const categories = [...categoriesList];
