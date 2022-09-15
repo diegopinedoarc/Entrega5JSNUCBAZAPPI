@@ -49,7 +49,7 @@ const renderCardCart = (product) => {
 <img class="imgCart" src ="${img}">
 <div class="cartBox_info">
   <p class="productName"> ${name} </p>
-  <span class="price"> $${price}</span>
+  <span class="price"> $${price * cant}</span>
 </div>
 <div class="moreLess">
   <span class= "less" data-id=${id}>-</span>
