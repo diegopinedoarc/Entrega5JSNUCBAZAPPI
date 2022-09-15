@@ -11,6 +11,7 @@ const titleCategory = document.querySelector(".titleCategory");
 const recommendContainer = document.querySelector("#containerRecommend");
 const total = document.querySelector(".total");
 const buyBTN = document.querySelector(".buy-btn");
+const cantCart = document.querySelector(".cantCart");
 
 //Seteo cart en localStorage
 // let cart = json.parse(localStorage.getItem("cart")) || [];

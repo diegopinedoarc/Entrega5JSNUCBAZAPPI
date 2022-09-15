@@ -42,6 +42,7 @@ const addToCart = (e) => {
       saveLocalStorage(cart);
       renderCart(cart);
       showTotal(cart);
+      showCant(cart);
     }
   });
 };
@@ -57,6 +58,8 @@ const handleQuantity = (e) => {
         renderCart(cart);
         showTotal(cart);
         disableBuyBtn();
+        showCant(cart);
+
         return;
       }
     }

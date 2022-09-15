@@ -65,4 +65,18 @@ const renderCart = (cartList) => {
   }
   cartContainer.innerHTML = cart.map(renderCardCart).join("");
   showTotal(cart);
+  showCant(cart);
+};
+
+const showCant = (cart) => {
+  console.log(cart);
+  console.log(cart.length);
+  if (cart.length === 0) {
+    console.log("aaa");
+    cantCart.innerHTML = "";
+    cantCart.classList.remove("cantActive");
+    return;
+  }
+  cantCart.classList.add("cantActive");
+  cantCart.innerHTML = `${cart.length}`;
 };

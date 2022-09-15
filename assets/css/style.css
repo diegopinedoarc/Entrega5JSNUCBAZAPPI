@@ -62,12 +62,28 @@ body {
   gap: 3rem;
   list-style: none;
   gap: 5rem;
+  position: relative;
 }
 
 .nav a {
   text-decoration: none;
   color: var(--blanco);
   font-size: 1.3rem;
+}
+
+#cartBtn {
+  position: relative;
+}
+
+.cantActive {
+  position: absolute;
+  top: -1rem;
+  padding: .2rem .5rem;
+  color: #fff;
+  font-size: 1rem;
+  border: .2rem solid #ffff;
+  background-color: #FF4B4B;
+  border-radius: 60%;
 }
 
 .flexCol {
@@ -521,9 +537,9 @@ body {
 
 .products-card__img-container {
   width: 100%;
-  height: 9rem;
+  height: 11rem;
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: 1.6rem;
 }
 
 .products-card__img {
