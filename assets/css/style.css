@@ -297,8 +297,8 @@ body {
 }
 
 .price {
-  background: none;
-  color: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  font-size: 1.6rem;
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -346,8 +346,9 @@ body {
 }
 
 .price {
-  background: none;
-  color: linear-gradient(to right, var(--degrade1), var(--degrade2));
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--degrade1), var(--degrade2));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
