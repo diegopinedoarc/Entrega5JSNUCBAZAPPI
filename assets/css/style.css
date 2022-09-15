@@ -412,6 +412,12 @@ body {
   width: 65%;
 }
 
+.btn--link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 
 
 .empty-msg {
